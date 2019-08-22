@@ -1,5 +1,4 @@
-
-#setp [DISPLAY](DISPLAY).hal_label_TEST_PCB_VER [EMC]MACHINE
+#For ST_FPGA_DC1_Rev.F daughtercard
 
 #############################################
 # STEP/DIRECTION
