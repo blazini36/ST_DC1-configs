@@ -1,3 +1,7 @@
+#For ST_FPGA_DC1_Rev.F daughtercard
+#Uses single channel "adc" hal component to interface the DE10-Nano ADC
+#Daughtercard Pin masking is done by use of net'd HAL signals as GPIO connections are not made intuitively
+
 # ###################################
 # Core EMC/HAL Loads
 # ###################################
@@ -60,7 +64,7 @@ addf scale.5                              servo-thread
 setp hm2_[HOSTMOT2](BOARD).0.gpio.034.is_output true
 setp hm2_[HOSTMOT2](BOARD).0.gpio.035.is_output true
 
-# Stepgen Enables *pin#19 (gpio.052) on Nano1 is dead 
+# Stepgen Enables 
 setp hm2_[HOSTMOT2](BOARD).0.gpio.050.is_output true
 setp hm2_[HOSTMOT2](BOARD).0.gpio.051.is_output true
 setp hm2_[HOSTMOT2](BOARD).0.gpio.052.is_output true
