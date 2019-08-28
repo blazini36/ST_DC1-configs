@@ -16,13 +16,13 @@ pin in float filter_gain; /* TAU */
  */
 pin out float out# [8];
 
+/** Persistent variable **/
+variable double _output [8];
 
 function _;
 
 license "GPL";
 ;;
-
-#include <time.h>
 
 FUNCTION(_)
 {

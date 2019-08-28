@@ -16,19 +16,16 @@ pin in float filter_gain; /* TAU */
  */
 pin out float out;
 
+/** Persistent variable **/
+variable double _output = 0;
 
 function _;
 
 license "GPL";
 ;;
 
-#include <time.h>
-
 FUNCTION(_)
 {
-    /* Persistent varaible used to track previous output value */
-    static double _output = 0; 
-
     /* input is the first 12 bits converted to double */
     double input = scale_gain * (double)(in & 0xFFF);
 
