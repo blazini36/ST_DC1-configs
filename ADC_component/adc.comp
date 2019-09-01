@@ -1,5 +1,4 @@
 /*Component for interfacing 12bit ADC, single channel version. Input is raw 32bit intager output is a scaled float. Filter is simply time based for noise compensation, but will slow down the output as gain increases.*/
-/*Filter is currently broken and will cause issues with other instances if enabled*/
 
 component adc;
 
