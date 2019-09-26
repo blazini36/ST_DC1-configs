@@ -38,11 +38,11 @@ FUNCTION(_)
     double input[8] = { 0,0,0,0,0,0,0,0 };
 
     /* Pull first 8 bits and multiply by gain */
-    for (i = 0; i < 8; ++i)
+    for (; i < 8; ++i)
         input[i] = scale_gain(i) * (double)(in(i) & 0xFFF);
     
     /* Init _output */
-    for (; !_output[i] && i < 8; ++i)
+    for (i = 0; !_output[i] && i < 8; ++i)
         _output[i] = input[i];
 
     /* lowpass filter */
